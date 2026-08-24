@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-- name: Unzip project
+      - name: Unzip project
         run: unzip -o PlantRescue-shell.zip
 
       - name: Write local.properties with API key
