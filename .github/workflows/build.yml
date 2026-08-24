@@ -12,8 +12,11 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Unzip project
+- name: Unzip project
         run: unzip -o PlantRescue-shell.zip
+
+      - name: Write local.properties with API key
+        run: echo "PLANTNET_API_KEY=${{ secrets.PLANTNET_API_KEY }}" >> PlantRescue/local.properties
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
